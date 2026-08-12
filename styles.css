@@ -1,0 +1,45 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#0ea5e9;--primary-dark:#0284c7;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--gray-700:#334155;--gray-800:#1e293b;--gray-900:#0f172a}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background:var(--gray-50);color:var(--gray-900);min-height:100vh;background-image:linear-gradient(135deg,var(--gray-50) 0%,#e0f2fe 100%)}
+header{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;padding:2rem 1.5rem;box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+.header-content{max-width:1200px;margin:0 auto}
+.header-content h1{font-size:2.5rem;font-weight:700}
+.header-content p{opacity:.9;font-size:1rem;margin-top:.25rem}
+.container{max-width:1200px;margin:0 auto;padding:1.5rem}
+.card{background:#fff;border-radius:.75rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);padding:1.5rem;margin-bottom:1.5rem;transition:all .3s}
+.card:hover{box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+.btn{padding:.625rem 1.25rem;border:none;border-radius:.5rem;font-weight:500;cursor:pointer;transition:all .2s;font-size:.875rem}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 4px 6px rgba(14,165,233,0.2)}
+.btn-secondary{background:var(--gray-200);color:var(--gray-700)}
+.btn-secondary:hover{background:var(--gray-300)}
+.search-card{background:#fff;padding:1rem}
+.search-container{display:flex;gap:.5rem;flex-wrap:wrap}
+.search-input{flex:1;min-width:200px;padding:.625rem 1rem;border:2px solid var(--gray-200);border-radius:.5rem;font-size:1rem;transition:border-color .2s}
+.search-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(14,165,233,0.1)}
+.current-weather{background:linear-gradient(135deg,#fff 0%,#f0f9ff 100%)}
+.weather-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.weather-header h2{font-size:2rem;font-weight:700}
+.weather-date{color:var(--gray-500);font-size:.875rem}
+.weather-temp{text-align:right}
+.weather-temp #temperature{font-size:3rem;font-weight:700;color:var(--primary)}
+.weather-temp #weatherDesc{color:var(--gray-600);font-size:1rem}
+.weather-details{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--gray-200)}
+.detail-item{text-align:center}
+.detail-label{display:block;font-size:.75rem;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em}
+.detail-value{display:block;font-size:1.25rem;font-weight:600;color:var(--gray-800);margin-top:.25rem}
+.ai-summary{background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);border-left:4px solid var(--primary)}
+.ai-summary h3{color:var(--primary-dark);margin-bottom:.5rem}
+.ai-summary p{color:var(--gray-700);line-height:1.6}
+.forecast-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+.forecast-item{background:#fff;padding:1rem;border-radius:.5rem;text-align:center;border:1px solid var(--gray-200);transition:all .2s}
+.forecast-item:hover{transform:translateY(-2px);box-shadow:0 4px 6px rgba(0,0,0,0.05)}
+.forecast-item .day{font-weight:600;color:var(--gray-700)}
+.forecast-item .temp{font-size:1.5rem;font-weight:700;color:var(--primary);margin:.5rem 0}
+.forecast-item .desc{font-size:.875rem;color:var(--gray-500)}
+.recent-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.recent-tag{padding:.375rem .75rem;background:var(--gray-100);border-radius:9999px;font-size:.875rem;cursor:pointer;transition:all .2s}
+.recent-tag:hover{background:var(--gray-200);transform:scale(1.05)}
+.spinner{width:40px;height:40px;margin:0 auto 1rem;border:4px solid var(--gray-200);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:640px){.weather-header{flex-direction:column;align-items:flex-start}.weather-temp{text-align:left;width:100%}.weather-temp #temperature{font-size:2.5rem}.forecast-grid{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}.search-container{flex-direction:column}.search-input{min-width:100%}}

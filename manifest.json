@@ -1,0 +1,23 @@
+{
+  "name": "Weather Dashboard",
+  "short_name": "Weather",
+  "description": "BC Canada Weather Dashboard",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 192 192\"><rect width=\"192\" height=\"192\" rx=\"32\" fill=\"%230ea5e9\"/><circle cx=\"96\" cy=\"88\" r=\"30\" fill=\"white\" opacity=\"0.9\"/><path d=\"M96 30 L96 50 M96 126 L96 146 M162 88 L142 88 M50 88 L30 88 M144 48 L130 62 M62 130 L48 144 M144 128 L130 114 M62 46 L48 32\" stroke=\"white\" stroke-width=\"4\" stroke-linecap=\"round\" opacity=\"0.7\"/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><rect width=\"512\" height=\"512\" rx=\"64\" fill=\"%230ea5e9\"/><circle cx=\"256\" cy=\"235\" r=\"80\" fill=\"white\" opacity=\"0.9\"/><path d=\"M256 80 L256 133 M256 337 L256 390 M432 235 L379 235 M133 235 L80 235 M384 128 L347 165 M165 347 L128 384 M384 342 L347 305 M165 123 L128 86\" stroke=\"white\" stroke-width=\"8\" stroke-linecap=\"round\" opacity=\"0.7\"/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

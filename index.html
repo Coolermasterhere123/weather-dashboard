@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard - BC Canada</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤️</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="header-content">
+        <h1>🌤️ Weather Dashboard</h1>
+        <p>British Columbia, Canada</p>
+      </div>
+    </header>
+    <main class="container">
+      <div class="card search-card">
+        <div class="search-container">
+          <input type="text" id="cityInput" placeholder="Enter city name..." class="search-input">
+          <button id="searchBtn" class="btn btn-primary">Search</button>
+          <button id="locationBtn" class="btn btn-secondary">📍 My Location</button>
+        </div>
+      </div>
+      <div id="loading" style="display: none; text-align: center; padding: 2rem;">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+      </div>
+      <div id="errorMessage" style="display: none; text-align: center; padding: 2rem; color: #dc2626;"></div>
+      <div id="currentWeather" style="display: none;">
+        <div class="card current-weather">
+          <div class="weather-header">
+            <div>
+              <h2 id="cityName">City</h2>
+              <p id="weatherDate" class="weather-date"></p>
+            </div>
+            <div class="weather-temp">
+              <span id="temperature">--°C</span>
+              <p id="weatherDesc">Description</p>
+            </div>
+          </div>
+          <div class="weather-details">
+            <div class="detail-item">
+              <span class="detail-label">Humidity</span>
+              <span id="humidity" class="detail-value">--%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Wind Speed</span>
+              <span id="windSpeed" class="detail-value">-- km/h</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Feels Like</span>
+              <span id="feelsLike" class="detail-value">--°C</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Pressure</span>
+              <span id="pressure" class="detail-value">-- hPa</span>
+            </div>
+          </div>
+        </div>
+        <div class="card ai-summary">
+          <h3>🤖 AI Weather Insight</h3>
+          <p id="aiSummary">Loading AI analysis...</p>
+          <button id="refreshAiBtn" class="btn btn-secondary" style="margin-top: 0.5rem;">Refresh AI Analysis</button>
+        </div>
+      </div>
+      <div id="forecast" style="display: none;">
+        <h3 style="margin-bottom: 1rem;">5-Day Forecast</h3>
+        <div id="forecastList" class="forecast-grid"></div>
+      </div>
+      <div class="card recent-searches">
+        <h3>Recent Cities</h3>
+        <div id="recentCities" class="recent-tags"></div>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
